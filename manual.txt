@@ -1,0 +1,18 @@
+오픈소스의 commit을 gpt에 물어보는 법
+
+1) 원하는 repository를 clone 받는다
+
+2) bash git-logger.sh 를 실행시켜 git-log.json을 생성한다
+
+3) git-log.json에서 유효하지 않은 부분을 고친다
+ex) \w -> \\w
+
+4) commit-checker.bat을 실행시킨다
+
+5) 만들어진 commits 디렉토리에서 커밋내용과 gpt의 응답을 확인한다
+주의! 1k token당 4kb 이상의 java 파일은 보내지 못함
+
+필요한 개선점
+1) 각 파일을 제시하는 것이 아닌, 실제로 변경된 메소드와 이와 연결된 메소드들만을 추출해 제시한다
+2) 주석 등을 제거하여 token을 줄인다(/**/, // 제거)
+3) json파일을 깨부수는 \이 발견되면 \\로 바꿔준다 - file > line > char > exception: replace('\\', '\\\\')
