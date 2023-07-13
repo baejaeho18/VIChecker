@@ -17,7 +17,7 @@ with open('api_key.txt', 'r', encoding='utf-8') as file:
 openai.api_key = api_key
 
 # 확인할 커밋 개수 : 100개
-max_commit = sys.argv[1] 
+max_commit = int(sys.argv[1]) 
 
 # stream = os.Popen('bash git-logger.sh')
 # output = stream.read()
@@ -63,17 +63,15 @@ def ask_to_gpt(file, content):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0613",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": question}
         ],
-        max_tokens=4000,
     )
     # generated answer
     answer = response['choices'][0]['message']['content'].strip()
     # Record the answer
     try:
         file = file.replace('.java', '.txt')
-        file_path = os.path.join('commits', f'{cnt}_{os.path.basename(file)}')
+        file_path = os.path.join('commits', f'{os.path.basename(file)}')
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(answer)   
     except:
