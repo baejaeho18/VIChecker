@@ -3,6 +3,7 @@ import subprocess
 import json
 import sys
 import openai
+import re
 
 # Read API key from file
 with open('../../api_key.txt', 'r', encoding='utf-8') as file:
@@ -29,6 +30,15 @@ def ask_to_gpt(file_path, content):
     except:
         print(f"Answer Write 오류")
 
+def remove_comments(code):
+    # Remove /* ... */ style comments
+    code = re.sub(r'/\*.*?\*/', '', code, flags=re.DOTALL)
+    
+    # Remove // style comments
+    code = re.sub(r'//.*', '', code)
+
+    return code
+
 def read_java_files(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -36,12 +46,14 @@ def read_java_files(directory):
                 file_path = os.path.join(root, file)
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
+                    content = remove_comments(content)
                     print(file_path)
                     # ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
                     try:
                         ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
                     except:
                         print("Response Error")
+
 
 # 현재 디렉토리에서 자바 파일 읽기
 dir_path = os.getcwd()
