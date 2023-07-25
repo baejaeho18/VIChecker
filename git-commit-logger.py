@@ -97,7 +97,7 @@ for commit in json_data:
 cnt = 0
 
 for commit in json_data:
-    if cnt > max_commit:
+    if cnt >= max_commit:
         break
     elif commit['changed_file_list'] != []:
         cnt += 1
