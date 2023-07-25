@@ -24,7 +24,6 @@ try:
 except json.JSONDecodeError as e:
     print(f"JSON 디코드 오류: {e}")
 
-subprocess.run(['mkdir', 'commits'])
 
 def read_checkout_file(file):
     try:
@@ -54,25 +53,31 @@ for commit in json_data:
         break
     
     changed_file_list = subprocess.run(['git', 'show', commit['commitHash'], '--name-only', '--pretty=format:%b'], capture_output=True, text=True)
-    lines = changed_file_list.stdout.split('\n')
+    if changed_file_list.returncode == 0 and changed_file_list.stdout:
+        lines = changed_file_list.stdout.split('\n')
+        # Process the rest of the code using the 'lines' variable
+    else:
+        # Handle the case when the Git command didn't execute successfully
+        print("Failed to get the changed file list.")
     
     for line in lines:
         if line.strip() in commit['body']:
             continue
         elif line.strip() != '':
             files.append(line.strip())
-            
-    is_all_java = all(file.endswith('.java') for file in files)
+                  
+    java_files = [file for file in files if file.endswith('.java')]
     
-    if is_all_java and files != []:
+    if java_files != [] :
         diff = subprocess.run(['git', 'show', commit['commitHash'], '-p'], capture_output=True, text=True)
-        commit['changed_file_list'] = files
-        file_path = os.path.join('commits', f'{cnt}_diff.txt')
-        write_checkout_file(file_path, diff.stdout)
-        cnt += 1
+        commit['changed_file_list'] = java_files
         print(files)
+        cnt += 1
         print(commit['commitHash'])
         print(cnt, ":", commit['changed_file_list'])
+        
+        file_path = os.path.join('commits', f'{cnt}_diff.txt')
+        write_checkout_file(file_path, diff.stdout)
 
 # print(json.dumps(json_data, indent = '\t'))
 
@@ -85,6 +90,7 @@ for commit in json_data:
 # 1) 여러 파일의 커밋일 경우 동일한 세션에서 누적해서 물어본다
 # 2) commitHash로 branch를 새로 파서 옮긴다. 그 안에서 수정된 부분이 call graph로 연결된 메소드들을 모은다.
 
+subprocess.run(['mkdir', 'commits'])
 
 cnt = 0
 
@@ -102,12 +108,12 @@ for commit in json_data:
         
         subprocess.run(['git', 'checkout', commit['commitHash'], '--', file])
         after_content = read_checkout_file(file) 
-        file_path = os.path.join('commits', f'{cnt}_after_{os.path.basename(file)}')
+        file_path = os.path.join('commits', f'{cnt}_{os.path.basename(file)}_after')
         write_checkout_file(file_path, after_content)
         
         subprocess.run(['git', 'checkout', commit['parent'], '--', file])
         before_content = read_checkout_file(file)
-        file_path = os.path.join('commits', f'{cnt}_before_{os.path.basename(file)}')
+        file_path = os.path.join('commits', f'{cnt}_{os.path.basename(file)}_before')
         write_checkout_file(file_path, before_content)
         
         subprocess.run(['git', 'checkout', 'HEAD', '--', file])
