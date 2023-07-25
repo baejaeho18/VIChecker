@@ -1,0 +1,31 @@
+There is a potential security vulnerability in the code provided:
+
+1. CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion'):
+
+   - In the `removeLast` method, there is a recursive call to remove the last entry in the LinkedList. This recursive implementation can lead to excessive recursion, causing a StackOverflowError or consuming a large amount of stack space. An attacker could exploit this vulnerability by adding a large number of entries to the LinkedList, causing the application to crash or consume excessive resources.
+
+   To fix this vulnerability, the code should be refactored to use an iterative approach instead of recursion for removing the last entry.
+
+   Here's the updated code for the `removeLast` method:
+   
+   ```java
+   static <K> Entry<K> removeLast(Entry<K> list) {
+       if (list == NULL || list.next == NULL) {
+           return (Entry<K>) NULL;
+       }
+       Entry<K> current = list;
+       Entry<K> previous = null;
+       while (current.next != NULL) {
+           previous = current;
+           current = current.next;
+       }
+       if (previous != null) {
+           previous.next = (Entry<K>) NULL;
+       }
+       return list;
+   }
+   ```
+
+   This updated implementation iterates through the LinkedList and keeps track of the previous entry. When the last entry is reached, it updates the previous entry's `next` reference to `NULL`, effectively removing the last entry.
+
+   By using an iterative approach, the code avoids excessive recursion and mitigates the risk of resource exhaustion.

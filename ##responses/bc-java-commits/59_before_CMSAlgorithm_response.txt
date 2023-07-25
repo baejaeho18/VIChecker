@@ -1,0 +1,1 @@
+This code does not seem to have any CWE or CVE related vulnerabilities. It is a list of constants for various cryptographic algorithms.

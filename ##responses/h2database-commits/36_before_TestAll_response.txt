@@ -1,0 +1,1 @@
+The provided code is a part of the H2 database testing suite. It contains a list of tests to be executed. There are no CWE or CVE related vulnerabilities in this code snippet.

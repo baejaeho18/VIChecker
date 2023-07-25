@@ -1,0 +1,1 @@
+There are no CWE or CVE related vulnerabilities found in the provided code. The code mainly consists of unit tests for various scenarios and custom TypeAdapters for AtomicLong and AtomicInteger classes. The code seems to be following best practices and does not show any security vulnerabilities.

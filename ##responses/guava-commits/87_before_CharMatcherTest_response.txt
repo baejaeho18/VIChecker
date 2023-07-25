@@ -1,0 +1,1 @@
+The provided code is a test class for the `CharMatcher` class in the `com.google.common.base` package. It does not contain any CWE or CVE related vulnerabilities.

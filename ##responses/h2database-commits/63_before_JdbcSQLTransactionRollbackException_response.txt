@@ -1,0 +1,1 @@
+This code does not contain any obvious CWE or CVE related vulnerabilities. It is a custom exception class that extends `SQLTransactionRollbackException` and implements the `JdbcException` interface. The code mainly provides additional functionality for handling and formatting exception messages and stack traces.

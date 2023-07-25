@@ -1,0 +1,1 @@
+There does not appear to be any CWE or CVE-related vulnerabilities in the provided code. The code consists of unit tests for the `JavaVersion` class, which tests the `getMajorJavaVersion` method for different input versions of Java. The code does not involve any user input or external dependencies that could potentially introduce vulnerabilities.

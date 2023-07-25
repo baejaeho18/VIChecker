@@ -1,0 +1,13 @@
+This code does not contain any CWE or CVE related vulnerabilities.
+
+The code represents a class named `UnhashableObject` that implements the `Comparable` interface. It has a private `value` field and a constructor to initialize it.
+
+The `equals()` method checks if the given object is an instance of `UnhashableObject` and compares the `value` field of both objects. If they are equal, it returns true; otherwise, it returns false.
+
+The `hashCode()` method throws an `UnsupportedOperationException` indicating that this class does not support hashing.
+
+The `toString()` method returns a string representation of the object, concatenating the string "DontHashMe" and the `value` field.
+
+Lastly, the `compareTo()` method compares the `value` field of two `UnhashableObject` instances and returns -1, 0, or 1 depending on whether the `value` of the current object is less than, equal to, or greater than the `value` of the other object, respectively.
+
+Overall, there are no known CWE or CVE related vulnerabilities in this code.

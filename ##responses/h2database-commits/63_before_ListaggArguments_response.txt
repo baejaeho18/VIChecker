@@ -1,0 +1,1 @@
+Based on the code provided, I do not see any CWE or CVE related vulnerabilities. The code consists of getter and setter methods for several private member variables, and there are no obvious security issues. However, without seeing the complete context and how this code is used, it is difficult to provide a comprehensive vulnerability assessment.

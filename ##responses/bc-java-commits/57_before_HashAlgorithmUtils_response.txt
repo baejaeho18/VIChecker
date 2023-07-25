@@ -1,0 +1,3 @@
+The code provided does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities. 
+
+It is a simple utility class that maps hash algorithm IDs to their corresponding names. The switch statement ensures that only defined algorithm IDs can be handled, and any unknown ID will throw an IllegalArgumentException.

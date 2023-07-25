@@ -1,0 +1,3 @@
+This code does not contain any CWE or CVE related vulnerabilities. It defines a class named Oid with integer constants representing OID values. There are also two static maps for mapping OIDs to names and names to OIDs. The static block initializes these maps using reflection to iterate over the Oid class fields and populate the maps with the field names and values. The code also provides two utility methods: toString(int oid) to convert an OID to its corresponding name, and valueOf(String oid) to convert a name or OID string to an integer OID value.
+
+There are no CWE or CVE related vulnerabilities in this code.

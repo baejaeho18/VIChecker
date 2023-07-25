@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE or CVE related vulnerabilities in the provided code. The code defines a static HashSet of built-in function names and provides a method to check if a given function name is a built-in function. This code seems to be free from any security vulnerabilities.

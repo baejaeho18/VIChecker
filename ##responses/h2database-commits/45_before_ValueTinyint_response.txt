@@ -1,0 +1,1 @@
+Based on the provided code, there don't appear to be any CWE or CVE related vulnerabilities. The code is properly type-checked and handles exceptions appropriately. However, it's important to note that code security depends on the context and how this code is used in conjunction with other code and systems.

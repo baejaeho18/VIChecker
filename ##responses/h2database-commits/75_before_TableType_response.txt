@@ -1,0 +1,1 @@
+The given code does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities. The code is simply an enum type definition with an override of the `toString()` method to provide custom string representations for each enum value. There are no significant security concerns in this code snippet.

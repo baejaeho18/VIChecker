@@ -1,0 +1,1 @@
+There are no CWE or CVE related vulnerabilities in the provided code. The code is a simple implementation of an IndexType class with methods to create different types of indexes.

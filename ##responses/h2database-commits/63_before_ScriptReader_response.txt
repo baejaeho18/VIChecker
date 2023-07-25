@@ -1,0 +1,1 @@
+Based on the provided code, there are no CWE or CVE related vulnerabilities. The code is primarily responsible for reading SQL statements from a script and handling remarks (comments) within the script. It does not directly handle any user input or perform any potentially vulnerable operations.

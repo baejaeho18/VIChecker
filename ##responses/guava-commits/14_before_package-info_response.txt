@@ -1,0 +1,1 @@
+The code snippet you provided is a package declaration and annotations, and does not contain any actual code. Therefore, it is not possible to identify vulnerabilities, CWEs, or CVEs in this specific code snippet. Please provide the actual code you would like to analyze for potential vulnerabilities.

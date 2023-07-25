@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities in the provided code.

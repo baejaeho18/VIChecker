@@ -1,0 +1,1 @@
+There are no apparent CWE or CVE related vulnerabilities in the provided code. The code is an enum implementation with a method to generate SQL based on the enum value. It does not involve any insecure coding practices or vulnerabilities.

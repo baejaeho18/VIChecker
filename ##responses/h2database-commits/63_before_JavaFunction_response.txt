@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE or CVE related vulnerabilities in the provided code. The code is a Java function implementation and it seems to handle the expressions and function calls properly.

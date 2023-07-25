@@ -1,0 +1,9 @@
+There are two potential vulnerabilities in the code:
+
+1. CWE-611: Improper Restriction of XML External Entity Reference
+In the method `testLegacyXxe()`, the variable `LICENSE_URL` is used to define an external entity in the XML payload. If an attacker can control the value of `LICENSE_URL`, they can potentially exploit XML External Entity (XXE) vulnerabilities to access local files or carry out denial of service attacks.
+
+2. CWE-643: Improper Neutralization of Data within XML Structure
+In the method `testGetSourceXxe()`, the XML payload `XXE_EXAMPLE` contains a DOCTYPE declaration that references an external entity. By passing this payload to the `PgSQLXML` object and invoking the `getSource()` method, the code attempts to parse the XML and access the contents. However, the code does not properly neutralize data within the XML structure, leaving it vulnerable to XXE attacks.
+
+To mitigate these vulnerabilities, the code should properly sanitize and validate any user-controlled input before using it in XML parsing or processing operations. Additionally, it is recommended to disable external entity expansion and avoid processing untrusted XML data altogether, especially if it contains potentially harmful payloads.

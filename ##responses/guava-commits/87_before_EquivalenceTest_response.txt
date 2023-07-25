@@ -1,0 +1,1 @@
+The code provided does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities. The code consists of unit tests for the Equivalence class in the Google Guava library, which are mainly focused on testing the behavior and correctness of the Equivalence class and its methods.

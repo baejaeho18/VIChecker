@@ -1,0 +1,1 @@
+There don't appear to be any CWE or CVE related vulnerabilities in this code. The code consists of regular expressions and parsing logic to parse a date format string. It does not contain any obvious security vulnerabilities.

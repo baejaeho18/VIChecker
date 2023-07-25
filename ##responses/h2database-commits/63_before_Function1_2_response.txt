@@ -1,0 +1,1 @@
+Based on the code provided, there aren't any CWE or CVE related vulnerabilities. The code appears to be a superclass for functions with two arguments and it mainly defines the behavior for getting the value of the function and generating the SQL representation of the function.

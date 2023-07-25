@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE or CVE related vulnerabilities in the provided code. It seems to be a simple class that defines properties for a function.

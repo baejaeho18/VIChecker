@@ -1,0 +1,1 @@
+The code provided does not contain any CWE or CVE related vulnerability. It is a simple enum class that represents different types of window frame exclusions in SQL. There is no security issue or vulnerability in this code.

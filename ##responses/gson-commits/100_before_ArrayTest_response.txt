@@ -1,0 +1,6 @@
+There is one CWE (Common Weakness Enumeration) vulnerability in the code:
+
+CWE-117: Improper Output Neutralization for Logs
+- In the method "testArrayOfPrimitivesAsObjectsDeserialization", the code uses the 'json' variable to store a JSON string that is later passed to the "new BigDecimal" constructor. This can be exploited to execute arbitrary code or cause a denial of service by passing a malicious input as 'json'. To mitigate this vulnerability, the input should be properly sanitized and validated before being used.
+
+There are no CVE (Common Vulnerabilities and Exposures) related vulnerabilities in the code.

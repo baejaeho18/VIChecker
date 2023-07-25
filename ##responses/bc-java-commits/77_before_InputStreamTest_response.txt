@@ -1,0 +1,1 @@
+There are no CWE or CVE related vulnerabilities in the provided code. The code mainly focuses on testing various scenarios and handling exceptions appropriately.

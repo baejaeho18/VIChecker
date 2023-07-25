@@ -1,0 +1,1 @@
+There are no CWE or CVE-related vulnerabilities in the provided code. The code seems to be a test case for the `PostConstructAdapterFactory` class, and it does not contain any security vulnerabilities.

@@ -1,0 +1,1 @@
+There are no CWE or CVE related vulnerabilities in the given code. The code is a simple Java class representing a bag of primitives and does not contain any security vulnerabilities.

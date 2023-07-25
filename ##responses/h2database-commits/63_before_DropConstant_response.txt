@@ -1,0 +1,1 @@
+Based on the provided code, there doesn't seem to be any CWE or CVE related vulnerability. The code mainly handles dropping a constant from a schema and uses standard H2 database methods to do so.

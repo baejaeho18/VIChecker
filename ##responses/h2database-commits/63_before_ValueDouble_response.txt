@@ -1,0 +1,1 @@
+There is no CWE or CVE related vulnerability in the provided code. The code mainly consists of value manipulation and computation methods for the "ValueDouble" class. It does not have any obvious security vulnerabilities.

@@ -1,0 +1,1 @@
+There don't appear to be any CWE or CVE related vulnerabilities in the provided code. The code seems to be a well-implemented utility class for working with boolean values and arrays.

@@ -1,0 +1,1 @@
+The code you provided does not contain any CWE or CVE related vulnerabilities. It is a simple class that represents a window frame bound in H2 database. There are no input validation issues, inadequate access control, or other security vulnerabilities present in the code.

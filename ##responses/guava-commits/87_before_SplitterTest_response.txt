@@ -1,0 +1,1 @@
+The code provided is the test code for a class called Splitter. It does not contain any CWE or CVE related vulnerabilities. The purpose of this code is to test the functionality of the Splitter class and ensure that it behaves as expected.

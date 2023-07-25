@@ -1,0 +1,9 @@
+I have reviewed the code and found the following vulnerabilities:
+
+1. CWE-89: SQL Injection:
+In the line `prep = conn.prepareStatement("SELECT * FROM TABLE(X INT=?, O INT=?) J INNER JOIN TEST T ON J.X=T.ID ORDER BY J.O");`, the query is constructed using string concatenation instead of using parameterized queries. This leaves the code vulnerable to SQL injection attacks.
+
+2. CWE-564: SQL Injection: 
+In the line `rs = stat.executeQuery("call get_x(make_point(10, 20))");`, again the query is constructed using string concatenation instead of using parameterized queries. This leaves the code vulnerable to SQL injection attacks.
+
+It is recommended to use parameterized queries/bind variables to prevent SQL injection attacks.

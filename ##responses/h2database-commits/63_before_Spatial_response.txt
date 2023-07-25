@@ -1,0 +1,1 @@
+This code does not contain any CWE or CVE related vulnerabilities. It is simply an interface definition for a spatial object with various methods for accessing and manipulating its dimensions. There are no obvious security vulnerabilities present in this code.

@@ -1,0 +1,1 @@
+The provided code is an interface definition, which does not contain any specific code implementation. Therefore, it is not possible to identify any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities in this code. Vulnerabilities typically arise from specific implementation details rather than just an interface definition.

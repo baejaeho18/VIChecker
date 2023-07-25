@@ -1,0 +1,1 @@
+The provided code is a package declaration and import statements which do not contain any actual code. Therefore, it is not possible to identify any CWE or CVE vulnerability in the provided code.

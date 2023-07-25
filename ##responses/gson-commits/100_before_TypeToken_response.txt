@@ -1,0 +1,1 @@
+There don't appear to be any CWE or CVE related vulnerabilities in the provided code. The code primarily consists of getter methods and utility functions for working with types and generics.

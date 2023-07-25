@@ -1,0 +1,1 @@
+The code you provided does not contain any CWE or CVE related vulnerabilities. It is a simple unit test class for the class `SqlTypesSupport`. The code is checking for the existence of certain constants and objects, and asserting that they are not null. This code does not have any security vulnerabilities.

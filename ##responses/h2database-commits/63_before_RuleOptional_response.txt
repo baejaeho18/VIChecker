@@ -1,0 +1,1 @@
+There are no CWE or CVE related vulnerabilities in the provided code. It is a simple Java class that implements the Rule interface and does not pose any security risks on its own.

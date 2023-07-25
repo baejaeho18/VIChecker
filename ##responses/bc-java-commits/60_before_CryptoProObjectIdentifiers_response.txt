@@ -1,0 +1,1 @@
+The given code does not contain any CWE or CVE related vulnerability. It is a simple definition of constant values using ASN1ObjectIdentifier class from the Bouncy Castle library. These constants represent various object identifiers used in the CryptoPro algorithm.

@@ -1,0 +1,1 @@
+The code appears to be a test class for custom type adapters in the Gson library. It does not contain any CWE or CVE related vulnerabilities.

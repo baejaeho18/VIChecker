@@ -1,0 +1,1 @@
+The provided code does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities. It is a simple exception class in the Java programming language and does not have any specific security-related issues.

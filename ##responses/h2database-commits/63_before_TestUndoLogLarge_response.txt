@@ -1,0 +1,1 @@
+The code provided does not have any CWE or CVE related vulnerabilities. It is a test code for H2 database and does not contain any security vulnerabilities. However, it is important to note that this code is just a test and should not be used in production systems without proper security measures.

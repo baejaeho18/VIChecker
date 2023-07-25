@@ -1,0 +1,3 @@
+There are no CWE or CVE related vulnerabilities in the given code. The code is simple and does not contain any security-related issues.
+
+However, one potential improvement could be to handle the `previous()` method instead of throwing an exception. Depending on the requirements of your application, you may want to implement the `previous()` functionality to navigate backward through the data.

@@ -1,0 +1,1 @@
+The code provided is an interface definition for a ListenableFuture in the `com.google.common.util.concurrent` package. It does not contain any CWE or CVE-related vulnerabilities as it is only an interface definition and does not contain any implementation or code that could introduce such vulnerabilities.

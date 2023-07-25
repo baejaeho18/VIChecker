@@ -1,0 +1,1 @@
+Based on the code provided, there are no CWE or CVE related vulnerabilities. The code is implementing two sorting algorithms (binary insertion sort and insertion sort) using generics and a comparator. There are no known security vulnerabilities or issues in this code snippet.

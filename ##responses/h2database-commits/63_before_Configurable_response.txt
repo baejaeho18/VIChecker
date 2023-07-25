@@ -1,0 +1,1 @@
+The provided code snippet does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities. It is a simple interface without any implementation or specific functionality.

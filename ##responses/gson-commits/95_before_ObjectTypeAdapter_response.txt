@@ -1,0 +1,1 @@
+The code does not contain any CWE or CVE related vulnerabilities. It is a TypeAdapter implementation for Gson library.

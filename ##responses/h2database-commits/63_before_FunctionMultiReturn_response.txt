@@ -1,0 +1,19 @@
+In the provided code, I don't see any CVE-related vulnerabilities. However, there is a CWE-related vulnerability which is CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'). 
+
+This vulnerability can occur in the following lines of code:
+
+```
+rs = conn.createStatement().executeQuery("SELECT * FROM P2C_SET('SELECT * FROM TEST')");
+```
+
+In this line, the SQL query is constructed using string concatenation, which can lead to SQL injection if the input is not properly validated or sanitized.
+
+To mitigate this vulnerability, it is recommended to use prepared statements and parameterized queries to properly bind the input values. Here's an example of how to do it:
+
+```
+PreparedStatement prep = conn.prepareStatement("SELECT * FROM P2C_SET(?)");
+prep.setString(1, "SELECT * FROM TEST");
+ResultSet rs = prep.executeQuery();
+```
+
+By using parameterized queries, input values are properly separated from the query structure, preventing any SQL injection attacks.

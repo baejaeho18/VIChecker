@@ -1,0 +1,1 @@
+The provided code does not contain any obvious CWE or CVE related vulnerabilities. However, it's worth mentioning that the code uses the H2 database library, and the presence of any vulnerabilities would depend on the version of the library being used. It's always recommended to keep libraries and dependencies up to date to minimize the risk of any known vulnerabilities.

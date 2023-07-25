@@ -1,0 +1,1 @@
+The code is a class that provides information about signature schemes in the Bouncy Castle JSSE provider. It does not contain any CWE or CVE related vulnerabilities.

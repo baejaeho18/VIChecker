@@ -1,0 +1,1 @@
+The provided code is a part of the H2 Database Engine that is responsible for tokenizing SQL statements. It does not contain any CWE or CVE related vulnerabilities.

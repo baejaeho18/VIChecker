@@ -1,0 +1,1 @@
+The given code is a part of the PostgreSQL JDBC driver implementation. It does not contain any known CWE or CVE related vulnerabilities.

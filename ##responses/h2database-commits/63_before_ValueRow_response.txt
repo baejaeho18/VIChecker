@@ -1,0 +1,1 @@
+There are no CWE or CVE related vulnerabilities in the given code. It appears to be a class definition for a ValueRow object, which represents a row of values in a database table.

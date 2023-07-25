@@ -1,0 +1,1 @@
+The code provided appears to be an interface definition in Java programming language. It does not contain any CWE or CVE related vulnerability.

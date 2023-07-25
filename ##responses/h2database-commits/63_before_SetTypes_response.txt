@@ -1,0 +1,1 @@
+There are no CWE or CVE vulnerabilities in the provided code. It is a simple Java class that defines a list of constants for different types. There are no security vulnerabilities or issues related to CWE or CVE present in this code.

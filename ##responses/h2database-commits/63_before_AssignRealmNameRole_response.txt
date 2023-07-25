@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE or CVE related vulnerabilities in the given code. The code is simply implementing the `UserToRolesMapper` interface and providing an implementation for the `mapUserToRoles` method.

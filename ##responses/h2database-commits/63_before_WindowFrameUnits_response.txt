@@ -1,0 +1,5 @@
+The provided code does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities.
+
+The code snippet given is an enumeration class named `WindowFrameUnits` that represents different window frame units. It simply declares three enum constants: ROWS, RANGE, and GROUPS. The `getSQL()` method returns the name of the constant as a string.
+
+Since there is no actual implementation or logic in the code snippet, there are no identifiable security vulnerabilities present.

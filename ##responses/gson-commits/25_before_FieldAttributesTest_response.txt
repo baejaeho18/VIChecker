@@ -1,0 +1,1 @@
+There is no CWE or CVE related vulnerability in the provided code. The code is a test class and does not contain any security vulnerabilities.

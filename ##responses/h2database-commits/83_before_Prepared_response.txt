@@ -1,0 +1,1 @@
+The given code does not appear to have any CWE or CVE related vulnerabilities. It is a class definition for a prepared statement in the H2 database engine. The code defines several variables and methods related to prepared statements.

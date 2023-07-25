@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE or CVE related vulnerabilities in the given code. The code is implementing an enum called TableType with various table types. The toString() method is overridden to provide custom string representations for some of the enum values. The code is simple and does not contain any security vulnerabilities.

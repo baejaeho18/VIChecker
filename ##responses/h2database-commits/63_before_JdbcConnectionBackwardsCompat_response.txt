@@ -1,0 +1,3 @@
+The provided code is an interface definition, and it does not contain any specific logic or implementation details. Therefore, it is not possible to identify specific CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities in this code snippet.
+
+CWE and CVE identification requires analyzing the specific implementation of the code and potential security flaws in its logic.

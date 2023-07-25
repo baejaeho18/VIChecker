@@ -1,0 +1,1 @@
+Based on the provided code, there doesn't appear to be any CWE or CVE related vulnerabilities. The code is mainly focused on testing different scenarios related to logging server message properties.

@@ -1,0 +1,1 @@
+There are no CWEs or CVEs related vulnerabilities in the given code.

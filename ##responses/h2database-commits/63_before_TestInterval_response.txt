@@ -1,0 +1,1 @@
+There doesn't appear to be any CWE or CVE related vulnerabilities in this code. It is mainly a test class for the Interval class in the H2 database library.

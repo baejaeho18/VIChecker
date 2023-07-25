@@ -1,0 +1,1 @@
+There doesn't seem to be any vulnerabilities related to CWE or CVE in the provided code. The code primarily consists of test cases for H2 Database features and doesn't show any signs of security vulnerabilities.

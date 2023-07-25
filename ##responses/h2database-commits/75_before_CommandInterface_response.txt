@@ -1,0 +1,1 @@
+There is no CWE or CVE related vulnerability in the provided code. The code is an interface definition with constant values and method signatures. It does not contain any code implementation or logic that could introduce vulnerabilities.

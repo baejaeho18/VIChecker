@@ -1,0 +1,1 @@
+The provided code is incomplete, as it is missing some required classes and methods. Therefore, it is not possible to check for CWE or CVE vulnerabilities.

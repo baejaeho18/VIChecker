@@ -1,0 +1,1 @@
+Based on the provided code, there doesn't appear to be any CWE or CVE related vulnerabilities. The code seems to simply define an EndEntityType class with some constants and methods for manipulation. It is not exposing any known security vulnerabilities.

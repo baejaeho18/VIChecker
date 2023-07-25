@@ -1,0 +1,1 @@
+This code appears to be a part of the Gson library and there are no CWE or CVE related vulnerabilities present in it.

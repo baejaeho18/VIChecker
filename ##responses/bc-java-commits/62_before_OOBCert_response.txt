@@ -1,0 +1,1 @@
+There don't appear to be any CWE or CVE related vulnerabilities in the provided code. The code mainly consists of constructors and static methods for creating instances of the `OOBCert` class. However, without additional context or usage of this code, it is difficult to determine if there are any security vulnerabilities.

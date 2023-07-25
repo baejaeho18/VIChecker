@@ -1,0 +1,1 @@
+The provided code does not contain any CWE (Common Weakness Enumeration) or CVE (Common Vulnerabilities and Exposures) related vulnerabilities as it only consists of class definitions with no actual code implementation.

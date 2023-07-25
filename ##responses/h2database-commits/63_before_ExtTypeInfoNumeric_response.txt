@@ -1,0 +1,5 @@
+Based on the provided code, there doesn't seem to be any CWE or CVE-related vulnerabilities. 
+
+The code defines a class named `ExtTypeInfoNumeric`, which extends `ExtTypeInfo` class. It also defines a constant `DECIMAL` of type `ExtTypeInfoNumeric`. The `ExtTypeInfoNumeric` class overrides the `getSQL` method to append "DECIMAL" to a `StringBuilder`.
+
+However, without the complete context of the code and its usage, it is difficult to determine if there are any specific vulnerabilities. The code snippet you provided appears to be a simple class definition and does not contain any obvious CWE or CVE-related vulnerabilities.

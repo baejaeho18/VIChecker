@@ -1,0 +1,1 @@
+The code provided does not contain any CWE or CVE related vulnerabilities. It is a simple unit test for serializing and deserializing an InetAddress object using the Gson library.
