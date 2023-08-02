@@ -42,17 +42,19 @@ def remove_comments(code):
 def read_java_files(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if "_before" in file and file.endswith(".java"):
+            if "_after" in file and file.endswith(".java"):
                 file_path = os.path.join(root, file)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    content = remove_comments(content)
-                    print(file_path)
-                    # ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
-                    try:
-                        ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
-                    except:
-                        print("Response Error")
+                response_file_path = file_path.replace(".java", "_response.txt")
+                if not os.path.exists(response_file_path):
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        # content = remove_comments(content)
+                        print(file_path)
+                        # ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
+                        try:
+                            ask_to_gpt(response_file_path, content)
+                        except:
+                            print("Response Error")
 
 
 # 현재 디렉토리에서 자바 파일 읽기
