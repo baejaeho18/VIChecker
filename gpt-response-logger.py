@@ -39,6 +39,8 @@ def remove_comments(code):
 
     return code
 
+import os
+
 def read_java_files(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -46,17 +48,41 @@ def read_java_files(directory):
                 file_path = os.path.join(root, file)
                 response_file_path = file_path.replace(".java", "_response.txt")
                 if not os.path.exists(response_file_path):
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                        # content = remove_comments(content)
-                        print(file_path)
-                        # ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
-                        try:
-                            ask_to_gpt(response_file_path, content)
-                        except:
-                            print("Response Error")
+                    file_size = os.path.getsize(file_path)
+                    if file_size <= 70 * 1024:  # 80KB in bytes
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                            # content = remove_comments(content)
+                            print(file_path)
+                            # ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
+                            try:
+                                ask_to_gpt(response_file_path, content)
+                            except Exception as e:
+                                print(f"Response Error: {str(e)}")
+                    else:
+                        print(f"Ignored {file_path} - File size exceeds 70KB")
+
+def read_diff_files(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith("_diff.txt"):
+                file_path = os.path.join(root, file)
+                response_file_path = file_path.replace(".txt", "_response.txt")
+                if not os.path.exists(response_file_path):
+                    file_size = os.path.getsize(file_path)
+                    if file_size <= 80 * 1024:  # 80KB in bytes
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                            print(file_path)
+                            try:
+                                ask_to_gpt(response_file_path, content)
+                            except Exception as e:
+                                print(f"Response Error: {str(e)}")
+                    else:
+                        print(f"Ignored {file_path} - File size exceeds 80KB")
 
 
 # 현재 디렉토리에서 자바 파일 읽기
 dir_path = os.getcwd()
-read_java_files(dir_path)
+read_diff_files(dir_path)
+# read_java_files(dir_path)
