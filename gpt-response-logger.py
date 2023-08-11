@@ -17,6 +17,7 @@ def ask_to_gpt(file_path, content):
     question = "Can you check the following code and if there is any CWE or CVE related vulnerability, can you point it out the number of CWE or CVE and describe it?\n" + content
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
+#        model="gpt-4",
         messages=[
             {"role": "user", "content": question}
         ],
@@ -49,7 +50,7 @@ def read_java_files(directory):
                 response_file_path = file_path.replace(".java", "_response.txt")
                 if not os.path.exists(response_file_path):
                     file_size = os.path.getsize(file_path)
-                    if file_size <= 70 * 1024:  # 80KB in bytes
+                    if file_size <= 80 * 1024:  # 80KB in bytes
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
                             # content = remove_comments(content)
@@ -60,7 +61,7 @@ def read_java_files(directory):
                             except Exception as e:
                                 print(f"Response Error: {str(e)}")
                     else:
-                        print(f"Ignored {file_path} - File size exceeds 70KB")
+                        print(f"Ignored {file_path} - File size exceeds 80KB")
 
 def read_diff_files(directory):
     for root, dirs, files in os.walk(directory):
