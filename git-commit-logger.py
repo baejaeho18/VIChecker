@@ -1,17 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import os
 import subprocess
 import json
 import sys
-
-
-# In[6]:
-
+import pandas as pd
 
 max_commit = 100 # int(sys.argv[1]) 
 
@@ -30,11 +21,7 @@ except json.JSONDecodeError as e:
 
 subprocess.run(['mkdir', 'commits'])
 
-
-# In[7]:
-
-
-def read_checkout_file(file):
+def read_file(file):
     try:
         with open(file, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -43,16 +30,12 @@ def read_checkout_file(file):
         content = ''
     return content
 
-def write_checkout_file(file_path, content):
+def write_file(file_path, content):
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
     except:
         print(f"File Write 오류")
-
-
-# In[9]:
-
 
 cnt = 0
 
@@ -60,8 +43,6 @@ for commit in json_data:
     files = []
     commit['changed_file_list'] = []
     
-    if cnt >= max_commit:
-        break
     
     changed_file_list = subprocess.run(['git', 'show', commit['commitHash'], '--name-only', '--pretty=format:%b'], capture_output=True, text=True)
     if changed_file_list.returncode == 0 and changed_file_list.stdout:
@@ -76,53 +57,50 @@ for commit in json_data:
             continue
         elif line.strip() != '':
             files.append(line.strip())
-            
-    is_all_java = all(file.endswith('.java') for file in files)
+                  
+    java_files = [file for file in files if file.endswith('.java')]
+    java_files = list(filter(lambda file: 'src/test' not in file, java_files))
     
-    if is_all_java and files != []:
+    if java_files != [] :
         diff = subprocess.run(['git', 'show', commit['commitHash'], '-p'], capture_output=True, text=True)
-        commit['changed_file_list'] = files
+        commit['changed_file_list'] = java_files
         print(files)
         cnt += 1
         print(commit['commitHash'])
         print(cnt, ":", commit['changed_file_list'])
-        
-        file_path = os.path.join('commits', f'{cnt}_diff.txt')
-        write_checkout_file(file_path, diff.stdout)
 
-
-# In[ ]:
-
+df = pd.DataFrame()
 
 cnt = 0
-
 for commit in json_data:
-    if cnt >= max_commit:
-        break
-    elif commit['changed_file_list'] != []:
+    if commit['changed_file_list'] != []:
         cnt += 1
         print(cnt)
     else:
         continue
-        
+    
+    print(commit['commitHash'])
+    
     for file in commit['changed_file_list']:
         print(file)
         
-        subprocess.run(['git', 'checkout', commit['commitHash'], '--', file])
-        after_content = read_checkout_file(file) 
-        file_path = os.path.join('commits', f'{cnt}_after_{os.path.basename(file)}')
-        write_checkout_file(file_path, after_content)
-        
-        subprocess.run(['git', 'checkout', commit['parent'], '--', file])
-        before_content = read_checkout_file(file)
-        file_path = os.path.join('commits', f'{cnt}_before_{os.path.basename(file)}')
-        write_checkout_file(file_path, before_content)
-        
-        subprocess.run(['git', 'checkout', 'HEAD', '--', file])
+        sanitized_path = file.replace("/", "_")
+        file_path = os.path.join('commits', f'{cnt}_diff_{sanitized_path}')
+        diff_content = read_file(file_path)
 
+        file_path = file_path.replace('.java', '_response.txt')
+        response_content = read_file(file_path)
 
-# In[ ]:
+        row_data = {
+                        "Repository":"h2database",
+                        "Hash Code":commit['commitHash'],
+                        "file name":file,
+                        "Diff Content":diff_content,
+                        "4,0 Response":response_content
+                    }
+        df = df._append(row_data, ignore_index=True)
+    
+    
+df.to_excel("../h2database.xlsx", index=False)
 
-
-
-
+print("데이터가 엑셀 파일에 저장되었습니다.")
