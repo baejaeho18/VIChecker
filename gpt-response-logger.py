@@ -3,6 +3,7 @@ import subprocess
 import json
 import sys
 import openai
+import time
 import re
 
 # Read API key from file
@@ -14,10 +15,11 @@ openai.api_key = api_key
 
 def ask_to_gpt(file_path, content):
     # Make a question using the API
-    question = "Can you check the following code and if there is any CWE or CVE related vulnerability, can you point it out the number of CWE or CVE and describe it?\n" + content
+    # question = "Can you check the following code and if there is any CWE or CVE related vulnerability, can you point it out the number of CWE or CVE and describe it?\n" + content
+    question = "Could you read the following diff file and, if there are any security vulnerabilities in changes, point out the related CWE or CVE numbers along with the reason they occurred?\n" + content
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-16k",
-#        model="gpt-4",
+#        model="gpt-3.5-turbo-16k",
+        model="gpt-4",
         messages=[
             {"role": "user", "content": question}
         ],
@@ -31,16 +33,13 @@ def ask_to_gpt(file_path, content):
     except:
         print(f"Answer Write 오류")
 
-def remove_comments(code):
-    # Remove /* ... */ style comments
-    code = re.sub(r'/\*.*?\*/', '', code, flags=re.DOTALL)
-    
-    # Remove // style comments
-    code = re.sub(r'//.*', '', code)
+def tchecker(errmsg, file):
+    if 10000 in errmsg and min in errmsg:
+        time.sleep(1)
+    if 8192 in errmsg:
+        with open("blackList", 'a', encoding='utf-8') as f:
+            f.write(file)
 
-    return code
-
-import os
 
 def read_java_files(directory):
     for root, dirs, files in os.walk(directory):
@@ -53,9 +52,7 @@ def read_java_files(directory):
                     if file_size <= 80 * 1024:  # 80KB in bytes
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
-                            # content = remove_comments(content)
                             print(file_path)
-                            # ask_to_gpt(file_path.replace(".java", "_response.txt"), content)
                             try:
                                 ask_to_gpt(response_file_path, content)
                             except Exception as e:
@@ -66,12 +63,12 @@ def read_java_files(directory):
 def read_diff_files(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if file.endswith("_diff.txt"):
+            if "_diff_" in file:
                 file_path = os.path.join(root, file)
-                response_file_path = file_path.replace(".txt", "_response.txt")
+                response_file_path = file_path.replace(".java", "_response.txt")
                 if not os.path.exists(response_file_path):
                     file_size = os.path.getsize(file_path)
-                    if file_size <= 80 * 1024:  # 80KB in bytes
+                    if file_size <= 23 * 1024:  # 80KB in bytes
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
                             print(file_path)
@@ -79,8 +76,9 @@ def read_diff_files(directory):
                                 ask_to_gpt(response_file_path, content)
                             except Exception as e:
                                 print(f"Response Error: {str(e)}")
+                                tchecker(str(e), file_path)
                     else:
-                        print(f"Ignored {file_path} - File size exceeds 80KB")
+                        print(f"Ignored {file_path} - File size exceeds 23KB")
 
 
 # 현재 디렉토리에서 자바 파일 읽기
