@@ -68,7 +68,7 @@ def read_diff_files(directory):
                 response_file_path = file_path.replace(".java", "_response.txt")
                 if not os.path.exists(response_file_path):
                     file_size = os.path.getsize(file_path)
-                    if file_size <= 23 * 1024:  # 80KB in bytes
+                    if file_size <= 30 * 1024:  # 30KB in bytes
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
                             print(file_path)
@@ -78,7 +78,7 @@ def read_diff_files(directory):
                                 print(f"Response Error: {str(e)}")
                                 tchecker(str(e), file_path)
                     else:
-                        print(f"Ignored {file_path} - File size exceeds 23KB")
+                        print(f"Ignored {file_path} - File size exceeds 30KB")
 
 
 # 현재 디렉토리에서 자바 파일 읽기
