@@ -1,0 +1,6 @@
+https://github.com/junit-team/junit4.git
+https://github.com/h2database/h2database.git
+https://github.com/google/gson.git
+https://github.com/google/guava.git
+https://github.com/bcgit/bc-java.git
+https://github.com/pgjdbc/pgjdbc.git
