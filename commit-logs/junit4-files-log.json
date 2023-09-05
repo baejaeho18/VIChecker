@@ -1,0 +1,384 @@
+[
+  {
+    "commitHash": "16228f3ccea3c6f1170488e0e268f3601d130f75",
+    "parent": "e50487c97a8ae9a3168df89751457ba4cfab4d2a",
+    "subject": "build: harden main.yml permissions",
+    "sanitized_subject_line": "build-harden-main.yml-permissions",
+    "commit_notes": "",
+    "body": "Signed-off-by: Alex <aleksandrosansan@gmail.com>",
+    "author_name": "Alex",
+    "commiter_name": "Marc Philipp",
+    "date": "Mon, 1 May 2023 16:25:25 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "e50487c97a8ae9a3168df89751457ba4cfab4d2a",
+    "parent": "354b72771d70255a860001c6b11786897c1c2fbd 933814efd02b242b804171ac89c74101b0bf1b96",
+    "subject": "Merge pull request #1757 from kcooney/eclipse-maven",
+    "sanitized_subject_line": "Merge-pull-request-1757-from-kcooney-eclipse-maven",
+    "commit_notes": "",
+    "body": "Recommend generating Eclipse project files with Maven",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Mon, 6 Feb 2023 19:44:22 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "933814efd02b242b804171ac89c74101b0bf1b96",
+    "parent": "354b72771d70255a860001c6b11786897c1c2fbd",
+    "subject": "Recommend generating Eclipse project files with Maven",
+    "sanitized_subject_line": "Recommend-generating-Eclipse-project-files-with-Maven",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "Kevin Cooney",
+    "date": "Sun, 22 Jan 2023 11:00:46 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "354b72771d70255a860001c6b11786897c1c2fbd",
+    "parent": "b6d496aaf4d48cd7b483c742d74b98f3892dbee4 ab24d613220a4acd8c98484d5a5942625dfd37c3",
+    "subject": "Merge pull request #1755 from kcooney/kcooney-email",
+    "sanitized_subject_line": "Merge-pull-request-1755-from-kcooney-kcooney-email",
+    "commit_notes": "",
+    "body": "Update email address for kcooney in pom.xml",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Sat, 14 Jan 2023 10:20:16 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "ab24d613220a4acd8c98484d5a5942625dfd37c3",
+    "parent": "b6d496aaf4d48cd7b483c742d74b98f3892dbee4",
+    "subject": "Update email address for kcooney in pom.xml",
+    "sanitized_subject_line": "Update-email-address-for-kcooney-in-pom.xml",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "Kevin Cooney",
+    "date": "Tue, 27 Dec 2022 09:48:34 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "b6d496aaf4d48cd7b483c742d74b98f3892dbee4",
+    "parent": "2a46ff3d70b15c6831603b784d9bec24acf4df80 5652a869444cbadbd8f5ee3dc6d83bc346e8d6b2",
+    "subject": "Merge pull request #1753 from kluever/patch-3",
+    "sanitized_subject_line": "Merge-pull-request-1753-from-kluever-patch-3",
+    "commit_notes": "",
+    "body": "Fix unused object creation in WithParameterSupplier",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Sat, 10 Dec 2022 11:47:28 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "5652a869444cbadbd8f5ee3dc6d83bc346e8d6b2",
+    "parent": "2a46ff3d70b15c6831603b784d9bec24acf4df80",
+    "subject": "Update WithParameterSupplier.java",
+    "sanitized_subject_line": "Update-WithParameterSupplier.java",
+    "commit_notes": "",
+    "body": "Capture unused Theories creation into an unused variable (ErrorProne's CheckReturnValue can be configured to require all constructor calls to be used).",
+    "author_name": "Kurt Alfred Kluever",
+    "commiter_name": "GitHub",
+    "date": "Tue, 29 Nov 2022 11:10:35 -0500",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "2a46ff3d70b15c6831603b784d9bec24acf4df80",
+    "parent": "5cc2cdc933cf5cb916464efb4429fcdb3f52ff07 65684f6b50cecbfe50936422d3bef8a1e2e5ebff",
+    "subject": "Merge pull request #1749 from cpovirk/noforeach",
+    "sanitized_subject_line": "Merge-pull-request-1749-from-cpovirk-noforeach",
+    "commit_notes": "",
+    "body": "Use an indexed for loop to avoid defining an unused variable.",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Wed, 23 Nov 2022 14:10:05 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "5cc2cdc933cf5cb916464efb4429fcdb3f52ff07",
+    "parent": "d5db99dc97745d3a70ef9e8352bfeb05b2ca2da3 86b979e11a20915c932ba56809a0fb5ef10ade67",
+    "subject": "Merge pull request #1719 from kluever/patch-2",
+    "sanitized_subject_line": "Merge-pull-request-1719-from-kluever-patch-2",
+    "commit_notes": "",
+    "body": "Fix \"ReturnValueIgnored\" errors flagged by error-prone  * Update AssertTest.java to use `assertNotNull()` on places where the return value of `e.getMessage()` is ignored",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Mon, 21 Nov 2022 12:30:46 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "d5db99dc97745d3a70ef9e8352bfeb05b2ca2da3",
+    "parent": "80838a508b8875080c1b59d04f14ebaf74908af0 d1f95df767333d07f45d553254a99693f31eea2e",
+    "subject": "Merge pull request #1740 from junit-team/marc/1739-fix-compile-error-on-jdk-18",
+    "sanitized_subject_line": "Merge-pull-request-1740-from-junit-team-marc-1739-fix-compile-error-on-jdk-18",
+    "commit_notes": "",
+    "body": "Fix compile error on JDK 18 and later",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Thu, 17 Nov 2022 14:08:34 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "86b979e11a20915c932ba56809a0fb5ef10ade67",
+    "parent": "ec20483b05e66db4b6801699b57c6a90949f3b3f",
+    "subject": "Update AssertTest.java",
+    "sanitized_subject_line": "Update-AssertTest.java",
+    "commit_notes": "",
+    "body": "Use `assertNotNull()` instead.",
+    "author_name": "Kurt Alfred Kluever",
+    "commiter_name": "GitHub",
+    "date": "Mon, 14 Nov 2022 10:15:36 -0500",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "65684f6b50cecbfe50936422d3bef8a1e2e5ebff",
+    "parent": "e767bccc69db20942c4f08253c6f957dc12615d3",
+    "subject": "Add a comment.",
+    "sanitized_subject_line": "Add-a-comment",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Chris Povirk",
+    "commiter_name": "Chris Povirk",
+    "date": "Mon, 10 Oct 2022 16:22:16 -0400",
+    "changed_file_list": [
+      "src/main/java/org/junit/internal/runners/ErrorReportingRunner.java"
+    ]
+  },
+  {
+    "commitHash": "e767bccc69db20942c4f08253c6f957dc12615d3",
+    "parent": "80838a508b8875080c1b59d04f14ebaf74908af0",
+    "subject": "Use an indexed for loop to avoid defining an unused variable.",
+    "sanitized_subject_line": "Use-an-indexed-for-loop-to-avoid-defining-an-unused-variable",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Chris Povirk",
+    "commiter_name": "Chris Povirk",
+    "date": "Tue, 4 Oct 2022 17:11:03 -0400",
+    "changed_file_list": [
+      "src/main/java/org/junit/internal/runners/ErrorReportingRunner.java"
+    ]
+  },
+  {
+    "commitHash": "d1f95df767333d07f45d553254a99693f31eea2e",
+    "parent": "6ba9c4dc1e71e9ceb2e35991e8fc0e4aee69ad6e",
+    "subject": "Allow running single test class from Maven via -Dtest=",
+    "sanitized_subject_line": "Allow-running-single-test-class-from-Maven-via-Dtest",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 15:00:32 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "6ba9c4dc1e71e9ceb2e35991e8fc0e4aee69ad6e",
+    "parent": "7d2a5dfa09a60edb0b2dda663ebb847ab37e1fbb",
+    "subject": "Remove usage of deprecated-for-removal SecurityManager",
+    "sanitized_subject_line": "Remove-usage-of-deprecated-for-removal-SecurityManager",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 15:00:10 +0200",
+    "changed_file_list": [
+      "src/main/java/org/junit/runner/JUnitCore.java"
+    ]
+  },
+  {
+    "commitHash": "7d2a5dfa09a60edb0b2dda663ebb847ab37e1fbb",
+    "parent": "0eb5ce72848d730da5bd6d42902fdd6a8a42055d",
+    "subject": "Add CO build for JDK 18",
+    "sanitized_subject_line": "Add-CO-build-for-JDK-18",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 14:12:35 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "0eb5ce72848d730da5bd6d42902fdd6a8a42055d",
+    "parent": "80838a508b8875080c1b59d04f14ebaf74908af0",
+    "subject": "Fix compile error on JDK 18 and later",
+    "sanitized_subject_line": "Fix-compile-error-on-JDK-18-and-later",
+    "commit_notes": "",
+    "body": "Resolves #1739. ",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 14:09:29 +0200",
+    "changed_file_list": [
+      "src/main/java/org/junit/runner/Result.java"
+    ]
+  },
+  {
+    "commitHash": "80838a508b8875080c1b59d04f14ebaf74908af0",
+    "parent": "a30434e90b47253131e4cdb3efe0dc92d6a0430b",
+    "subject": "Revert \"Update Maven to 3.8.5\"",
+    "sanitized_subject_line": "Revert-Update-Maven-to-3.8.5",
+    "commit_notes": "",
+    "body": "This reverts commit 543f60a9874f89c972b77c4160354358c4cbef2f. ",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 14:09:18 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "a30434e90b47253131e4cdb3efe0dc92d6a0430b",
+    "parent": "543f60a9874f89c972b77c4160354358c4cbef2f",
+    "subject": "Use Maven wrapper compatible with JDK 6",
+    "sanitized_subject_line": "Use-Maven-wrapper-compatible-with-JDK-6",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 14:04:13 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "543f60a9874f89c972b77c4160354358c4cbef2f",
+    "parent": "cc7c500584fcb85eaf98c568b7441ceac6dd335c",
+    "subject": "Update Maven to 3.8.5",
+    "sanitized_subject_line": "Update-Maven-to-3.8.5",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Marc Philipp",
+    "commiter_name": "Marc Philipp",
+    "date": "Sun, 15 May 2022 13:59:13 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "cc7c500584fcb85eaf98c568b7441ceac6dd335c",
+    "parent": "7167b23b3ba7dd79410f6e9db350d16cbe30617b 43df829aeef59d65b951a1eff3daf3c6fadbaee1",
+    "subject": "Merge pull request #1732 from cpoerschke/main-reduce-warnings-multi-commit",
+    "sanitized_subject_line": "Merge-pull-request-1732-from-cpoerschke-main-reduce-warnings-multi-commit",
+    "commit_notes": "",
+    "body": "Address some warnings (in 4 parts)",
+    "author_name": "Kevin Cooney",
+    "commiter_name": "GitHub",
+    "date": "Mon, 3 Jan 2022 07:14:38 -0800",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "43df829aeef59d65b951a1eff3daf3c6fadbaee1",
+    "parent": "45be4aed5aa796e68af5625d73cc8a1c996e3469",
+    "subject": "code review feedback: reduce scope of the 'unchecked cast' warning fix a.k.a. @SuppressWarnings('unchecked')",
+    "sanitized_subject_line": "code-review-feedback-reduce-scope-of-the-unchecked-cast-warning-fix-a.k.a.-SuppressWarnings-unchecked",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Christine Poerschke",
+    "commiter_name": "Christine Poerschke",
+    "date": "Fri, 31 Dec 2021 09:23:05 +0000",
+    "changed_file_list": [
+      "src/main/java/org/junit/runners/model/FrameworkMember.java"
+    ]
+  },
+  {
+    "commitHash": "45be4aed5aa796e68af5625d73cc8a1c996e3469",
+    "parent": "099d5881105422e80fbba2059b4907cb0a3b6f21",
+    "subject": "fix JavaDoc warnings [unchecked cast]",
+    "sanitized_subject_line": "fix-JavaDoc-warnings-unchecked-cast",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Christine Poerschke",
+    "commiter_name": "Christine Poerschke",
+    "date": "Thu, 30 Dec 2021 08:50:42 +0000",
+    "changed_file_list": [
+      "src/main/java/org/junit/runners/model/FrameworkMember.java"
+    ]
+  },
+  {
+    "commitHash": "099d5881105422e80fbba2059b4907cb0a3b6f21",
+    "parent": "cda745419600dc6a6b31dc46619288a93c76b6c1",
+    "subject": "fix JavaDoc warnings [no description for @param]",
+    "sanitized_subject_line": "fix-JavaDoc-warnings-no-description-for-param",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Christine Poerschke",
+    "commiter_name": "Christine Poerschke",
+    "date": "Thu, 30 Dec 2021 08:49:08 +0000",
+    "changed_file_list": [
+      "src/main/java/org/junit/internal/runners/statements/FailOnTimeout.java",
+      "src/main/java/org/junit/runner/JUnitCore.java"
+    ]
+  },
+  {
+    "commitHash": "cda745419600dc6a6b31dc46619288a93c76b6c1",
+    "parent": "0391e4587c0db1b27fa0132c5cd499951085784b",
+    "subject": "fix JavaDoc warnings [no description for @throws]",
+    "sanitized_subject_line": "fix-JavaDoc-warnings-no-description-for-throws",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Christine Poerschke",
+    "commiter_name": "Christine Poerschke",
+    "date": "Thu, 30 Dec 2021 08:47:46 +0000",
+    "changed_file_list": [
+      "src/main/java/org/junit/internal/Classes.java",
+      "src/main/java/org/junit/runner/FilterFactories.java",
+      "src/main/java/org/junit/runner/notification/SynchronizedRunListener.java"
+    ]
+  },
+  {
+    "commitHash": "0391e4587c0db1b27fa0132c5cd499951085784b",
+    "parent": "7167b23b3ba7dd79410f6e9db350d16cbe30617b",
+    "subject": "remove usages of deprecated org.junit.Assert.assertThat()",
+    "sanitized_subject_line": "remove-usages-of-deprecated-org.junit.Assert.assertThat",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Christine Poerschke",
+    "commiter_name": "Christine Poerschke",
+    "date": "Thu, 30 Dec 2021 08:44:54 +0000",
+    "changed_file_list": [
+      "src/main/java/org/junit/rules/ErrorCollector.java",
+      "src/main/java/org/junit/rules/ExpectedException.java"
+    ]
+  },
+  {
+    "commitHash": "ec20483b05e66db4b6801699b57c6a90949f3b3f",
+    "parent": "7167b23b3ba7dd79410f6e9db350d16cbe30617b",
+    "subject": "Fix \"ReturnValueIgnored\" errors flagged by error-prone",
+    "sanitized_subject_line": "Fix-ReturnValueIgnored-errors-flagged-by-error-prone",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Kurt Alfred Kluever",
+    "commiter_name": "GitHub",
+    "date": "Wed, 6 Oct 2021 13:21:38 -0400",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "7167b23b3ba7dd79410f6e9db350d16cbe30617b",
+    "parent": "3f7fc0cf5b12ad1a73e6d76302c2cceb63b65eaf",
+    "subject": "Use Java 8 for publishing snapshots",
+    "sanitized_subject_line": "Use-Java-8-for-publishing-snapshots",
+    "commit_notes": "",
+    "body": "To work around SSL problems, the build now uses Java 8 for the job that publishes snapshots to oss.sonatype.org.",
+    "author_name": "Marc Philipp",
+    "commiter_name": "GitHub",
+    "date": "Wed, 6 Oct 2021 13:30:52 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "3f7fc0cf5b12ad1a73e6d76302c2cceb63b65eaf",
+    "parent": "e6a4deda6622ac3c34758937d2573d40d23a39dc",
+    "subject": "Update build matrix to use GA version of JDK 17",
+    "sanitized_subject_line": "Update-build-matrix-to-use-GA-version-of-JDK-17",
+    "commit_notes": "",
+    "body": "",
+    "author_name": "Marc Philipp",
+    "commiter_name": "GitHub",
+    "date": "Wed, 6 Oct 2021 13:25:28 +0200",
+    "changed_file_list": []
+  },
+  {
+    "commitHash": "e6a4deda6622ac3c34758937d2573d40d23a39dc",
+    "parent": "f3ffe841d994bc2b6155ec132a974f3d90d6bc3e",
+    "subject": "Fix dead link to the Ant task in faq.fml",
+    "sanitized_subject_line": "Fix-dead-link-to-the-Ant-task-in-faq.fml",
+    "commit_notes": "",
+    "body": "URL http://ant.apache.org/manual/OptionalTasks/junit.html is dead.  Use up-to-date URL for documentation of Ant's JUnit task in file 'faq.fml'. This is similar to commit 24dfdd76 (Fix dead link to the ant task in FAQ (#1478), 2017-08-08). ",
+    "author_name": "Andrei Rybak",
+    "commiter_name": "Marc Philipp",
+    "date": "Wed, 6 Oct 2021 08:34:34 +0200",
+    "changed_file_list": []
+  }
+]
